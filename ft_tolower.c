@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/17 20:46:36 by isastre-         ###   ########.fr       */
+/*   Created: 2024/09/17 20:26:49 by isastre-          #+#    #+#             */
+/*   Updated: 2024/09/17 20:44:23 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-#ifndef FT_LIBFT_H
-#define FT_LIBFT_H
-
-
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-int ft_isalnum(int c);
-int ft_isascii(int c);
-int ft_isprint(int c);
-
-size_t ft_strlen(const char *s);
-void	*ft_memset(void *dest, int c, size_t count);
-
-int ft_toupper(int c);
-int ft_tolower(int c);
-char *ft_strchr(const char *s, int c);
-char *ft_strrchr(const char *s, int c);
-
-#endif
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
+}
