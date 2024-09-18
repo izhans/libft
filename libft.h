@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/18 17:56:40 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/09/18 20:20:45 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int ft_isprint(int c);
 size_t ft_strlen(const char *s);
 void	*ft_memset(void *dest, int c, size_t count);
 void ft_bzero(void *s, size_t n);
+void *ft_memcpy(void *dest, const void *src, size_t n);
 
 int ft_toupper(int c);
 int ft_tolower(int c);
