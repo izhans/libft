@@ -5,23 +5,22 @@
 void test_memset()
 {
 	// printed result should be the same
-	char buffer[20 + 1];
-	char *string;
+	int buffer_size = 20 + 1; // 1 for the final '\0'
+	char buffer[buffer_size];
 
 	memset(buffer, 0, sizeof(buffer));
-	string = (char *) memset(buffer,'A', 10);
-	printf("\nBuffer contents: %s\n", string);
+	memset(buffer,'A', 10);
 	memset(buffer+10, 'B', 10);
-	printf("\nBuffer contents: %s\n", buffer);
 
-	char buffer2[20 + 1];
-	char *string2;
+	char buffer2[buffer_size];
 
 	ft_memset(buffer2, 0, sizeof(buffer2));
-	string2 = (char *) ft_memset(buffer2,'A', 10);
-	printf("\nBuffer contents: %s\n", string2);
+	ft_memset(buffer2,'A', 10);
 	ft_memset(buffer2+10, 'B', 10);
-	printf("\nBuffer contents: %s\n", buffer2);
+
+	if (memcmp(buffer, buffer2, buffer_size) != 0)
+		printf("Test 1 memset fail\n");
+
 }
 
 int main()
