@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/18 20:20:45 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/09/19 00:03:32 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ int ft_toupper(int c);
 int ft_tolower(int c);
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
+
+char *ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
