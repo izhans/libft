@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 21:04:00 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/17 19:57:20 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/09/22 23:57:08 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_memset(void *dest, int c, size_t count)
 	unsigned char	*d;
 
 	i = 0;
+	d = dest;
 	while (i < count)
 	{
-		d = &dest[i];
-		*d = c;
+		*(d + i) = c;
 		i++;
 	}
 	return (dest);

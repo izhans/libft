@@ -2,9 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-void test_memset()
+void test_memset_fill_2_times()
 {
-	// printed result should be the same
 	int buffer_size = 20 + 1; // 1 for the final '\0'
 	char buffer[buffer_size];
 
@@ -23,7 +22,26 @@ void test_memset()
 
 }
 
+void test_letter_scale()
+{
+	int size = 5;
+	char str[size + 1];
+	int i = 0;
+	int c = 'a';
+	while (i < size)
+	{
+		ft_memset(str + i, c, size - i);
+		i++, c++;
+	}
+
+	char *expected = "abcde";
+	if (memcmp(str, expected, size +1))
+		printf("Test 2 memset fail\n");
+	
+}
+
 int main()
 {
-	test_memset();
+	test_memset_fill_2_times();
+	test_letter_scale();
 }
