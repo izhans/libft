@@ -2,7 +2,7 @@
 #include "_test_functions.c"
 #include <string.h>
 
-#define FUNCTION "x"
+#define FUNCTION "strnstr"
 
 void test_if_little_is_an_empty_string_then_returns_big()
 {
@@ -54,14 +54,42 @@ void test_if_little_str_is_in_big_then_returns_pointer_to_big()
 
 	result = ft_strnstr(big, little, len);
 
-	printf("%s\n", big + 7);
-	printf("%s\n", result);
+	// printf("%s\n", big + 7);
+	// printf("%s\n", result);
 
 	if (result != (big + 7))
 		print_test_fail(4, FUNCTION);
 }
 
+void test_if_little_str_is_not_in_big_then_returns_null()
+{
+	char *big = "hellow world";
+	char *little = "worla";
+	size_t len = 12;
+	char *result;
 
+	result = ft_strnstr(big, little, len);
+
+	// printf("%s\n", result);
+
+	if (result != NULL)
+		print_test_fail(5, FUNCTION);
+}
+
+void test_if_little_str_is_bigger_than_big_then_returns_null()
+{
+	char *big = "hi";
+	char *little = "hello";
+	size_t len = 5;
+	char *result;
+
+	result = ft_strnstr(big, little, len);
+
+	// printf("%s\n", result);
+
+	if (result != NULL)
+		print_test_fail(6, FUNCTION);
+}
 
 int main()
 {
@@ -69,4 +97,6 @@ int main()
 	test_if_little_char_is_not_in_big_then_returns_null();
 	test_if_little_char_is_in_big_then_returns_pointer_to_big();
 	test_if_little_str_is_in_big_then_returns_pointer_to_big();
+	test_if_little_str_is_not_in_big_then_returns_null();
+	test_if_little_str_is_bigger_than_big_then_returns_null();
 }
