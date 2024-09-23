@@ -52,9 +52,25 @@ void test_size_is_bigger_than_str_len()
 	
 }
 
+void test_copy_on_an_empty_string()
+{
+	char s[] = "Hola manolo";
+	char t[12] = "";
+	char t2[12] = "";
+	int n = 12;
+
+	size_t r1, r2;
+	r1 = strlcpy(t, s, n);
+	r2 = ft_strlcpy(t2, s, n);
+
+	if (r1 != r2 || memcmp(t, t2, 12) != 0)
+		print_test_fail(4, FUNCTION);
+}
+
 int main()
 {
 	test_copy_str();
 	test_copy_part_of_str();
 	test_size_is_bigger_than_str_len();
+	test_copy_on_an_empty_string();
 }
