@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/23 18:53:15 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/09/23 19:48:23 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len);
 int ft_atoi(const char *nptr);
 
 void *ft_calloc(size_t nmemb, size_t size);
-
+char *ft_strdup(const char *s);
 // part 2
 char *ft_substr(char const *s, unsigned int start, size_t len);
 #endif
