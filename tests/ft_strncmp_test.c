@@ -74,6 +74,31 @@ void test_n_overflows_strings()
 		print_test_fail(7, FUNCTION);
 }
 
+void test_returns_zero_when_size_is_zero()
+{
+	char *s1 = "zyxbcdefgh";
+	char *s2 = "abcdwxyz";
+	int n = 0;
+
+	if (strncmp(s1, s2, n) != ft_strncmp(s1, s2, n))
+		print_test_fail(8, FUNCTION);
+}
+
+void test_returns_correctly_unsigned_char_difference()
+{
+	char *s1 = "test\161";
+	char *s2 = "test\0";
+	int n = 6;
+
+	if (strncmp(s1, s2, n) != ft_strncmp(s1, s2, n))
+	{
+		print_test_fail(9, FUNCTION);
+		printf("%d %d\n", strncmp(s1, s2, n), ft_strncmp(s1, s2, n));
+		printf("%s %s\n", s1, s2);
+		printf("%lu %lu\n", strlen(s1), strlen(s2));
+	}
+}
+
 int main()
 {
 	test_equal_strings();
@@ -83,4 +108,6 @@ int main()
 	test_empty_s1();
 	test_empty_s2();
 	test_n_overflows_strings();
+	test_returns_zero_when_size_is_zero();
+	test_returns_correctly_unsigned_char_difference();
 }
