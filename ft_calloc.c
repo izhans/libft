@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 18:36:16 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/23 19:46:48 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/09/25 00:08:54 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	alloc_size = nmemb * size;
 	mem = malloc(alloc_size);
+	if (mem == NULL)
+		return (NULL);
 	ft_bzero(mem, alloc_size);
 	return (mem);
 }
