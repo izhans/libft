@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:42:52 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/23 03:43:42 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/09/28 13:37:01 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*d;
 	char	*s;
 
+	if (dest == NULL && src == NULL)
+		return (dest);
 	d = (char *) dest;
 	s = (char *) src;
 	if (dest < src)
