@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 20:46:48 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/17 20:59:40 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:51:09 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,15 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
+	char	ch;
 
 	last = NULL;
-	if (c == '\0')
+	ch = c;
+	if (ch == '\0')
 		return ((char *) s + ft_strlen(s));
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == ch)
 			last = (char *) s;
 		s++;
 	}
