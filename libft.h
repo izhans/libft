@@ -6,11 +6,12 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/23 19:48:23 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/02 19:48:15 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
 
 #ifndef FT_LIBFT_H
 #define FT_LIBFT_H
@@ -44,4 +45,6 @@ void *ft_calloc(size_t nmemb, size_t size);
 char *ft_strdup(const char *s);
 // part 2
 char *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+
 #endif
