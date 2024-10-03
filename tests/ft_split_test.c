@@ -6,7 +6,8 @@
 
 int main()
 {
-	char *str = "Hola mundo";
+	char *str = " Hola     mundo  que pasa ";
+	// char *str = NULL;
 	char c = ' ';
 
 	char **res = 
