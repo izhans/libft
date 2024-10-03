@@ -61,9 +61,23 @@ int main()
 	// test2();
 	// test3();
 
-	char *str = "    Hola mundo ";
+	char *str = "Hola mundo";
 	char c = ' ';
 
+	char **res = 
 	ft_split(str, c);
+	if (res == NULL)
+	{
+		printf("res is NULL\n");
+		return 0;
+	}
+	
+	while (*res)
+	{
+		printf("<%s>\n", *res);
+		res++;
+	}
+	// free(res);
+	
 	return 0;
 }
