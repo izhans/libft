@@ -48,9 +48,7 @@ void test_str_without_separator()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with one word :)\n");
 }
 
@@ -73,9 +71,7 @@ void test_str_with_separator_in_the_middle()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with 2 words :)\n");
 }
 
@@ -98,9 +94,7 @@ void test_str_with_double_separator_in_the_middle()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with double separator :)\n");
 }
 
@@ -123,9 +117,7 @@ void test_str_with_multiple_separator_in_the_middle()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with multiple separators :)\n");
 }
 
@@ -148,9 +140,7 @@ void test_str_with_multiple_separator_at_the_beggining()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with multiple separators at beggining :)\n");
 }
 
@@ -173,9 +163,7 @@ void test_str_with_multiple_separator_at_the_end()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with multiple separators at end :)\n");
 }
 
@@ -198,9 +186,7 @@ void test_str_with_multiple_separators_everywhere()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with multiple separators everywhere :)\n");
 }
 
@@ -223,9 +209,7 @@ void test_str_with_multiple_words()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with multiple words :)\n");
 }
 
@@ -248,9 +232,7 @@ void test_str_and_null_separator()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with a null separator :)\n");
 }
 
@@ -273,9 +255,7 @@ void test_empty_str_and_null_separator()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with a null separator :)\n");
 }
 
@@ -298,9 +278,7 @@ void test_larger_str()
 			exit(1);
 		}
 		i++;
-		free(actual[i]);
 	}
-	free(actual);
 	printf("Your split works with a larger str :)\n");
 }
 
