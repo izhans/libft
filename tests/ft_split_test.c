@@ -21,7 +21,7 @@ void print_res(char **res)
 	printf("end of res: %s\n", *res);
 }
 
-void print_expected_vs_actual(char **expected, char **actual)
+void print_expected_vs_actual_split(char **expected, char **actual)
 {
 	printf("\nexpected:\n");
 	print_res(expected);
@@ -44,7 +44,7 @@ void test_str_without_separator()
 		{
 			print_test_fail(1, FUNCTION);
 			printf("[KO] Your split does not work with one word");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -67,7 +67,7 @@ void test_str_with_separator_in_the_middle()
 		{
 			print_test_fail(2, FUNCTION);
 			printf("[KO] Your split does not work with 2 words");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -90,7 +90,7 @@ void test_str_with_double_separator_in_the_middle()
 		{
 			print_test_fail(3, FUNCTION);
 			printf("[KO] Your split does not work with double separator");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -113,7 +113,7 @@ void test_str_with_multiple_separator_in_the_middle()
 		{
 			print_test_fail(4, FUNCTION);
 			printf("[KO] Your split does not work with multiple separators");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -136,7 +136,7 @@ void test_str_with_multiple_separator_at_the_beggining()
 		{
 			print_test_fail(5, FUNCTION);
 			printf("[KO] Your split does not work with multiple separators at beggining");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -159,7 +159,7 @@ void test_str_with_multiple_separator_at_the_end()
 		{
 			print_test_fail(6, FUNCTION);
 			printf("[KO] Your split does not work with multiple separators at end");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -182,7 +182,7 @@ void test_str_with_multiple_separators_everywhere()
 		{
 			print_test_fail(7, FUNCTION);
 			printf("[KO] Your split does not work with multiple separators everywhere");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -205,7 +205,7 @@ void test_str_with_multiple_words()
 		{
 			print_test_fail(8, FUNCTION);
 			printf("[KO] Your split does not work with multiple words");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -228,7 +228,7 @@ void test_str_and_null_separator()
 		{
 			print_test_fail(9, FUNCTION);
 			printf("[KO] Your split does not work with a null separator");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -251,7 +251,7 @@ void test_empty_str_and_null_separator()
 		{
 			print_test_fail(10, FUNCTION);
 			printf("[KO] Your split does not work with a null separator");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;
@@ -274,7 +274,7 @@ void test_larger_str()
 		{
 			print_test_fail(11, FUNCTION);
 			printf("[KO] Your split does not work with a larger str");
-			print_expected_vs_actual(expected, actual);
+			print_expected_vs_actual_split(expected, actual);
 			exit(1);
 		}
 		i++;

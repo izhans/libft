@@ -6,13 +6,12 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 04:35:47 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/05 20:44:59 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/06 01:05:07 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		**ft_alloc_null(char *str);
 static size_t	ft_count_parts(char const *s, char c);
 static char		**ft_free(char **strs, char *str, size_t i);
 static char		**ft_alloc(char **strs, char *str, size_t parts, char c);
@@ -24,25 +23,13 @@ char	**ft_split(char const *s, char c)
 	char	*str;
 
 	str = ft_strtrim(s, &c);
-	if (*str == '\0')
-		return (ft_alloc_null(str));
 	parts = ft_count_parts(str, c);
+	if (*str == '\0')
+		parts = 0;
 	strs = malloc((parts + 1) * sizeof(char *));
 	if (strs == NULL)
-		return (ft_free(strs, str, 0));
+		return (ft_free(NULL, str, 0));
 	return (ft_alloc(strs, str, parts, c));
-}
-
-static char	**ft_alloc_null(char *str)
-{
-	char	**strs;
-
-	ft_free(NULL, str, 0);
-	strs = malloc(1 * sizeof(char *));
-	if (strs == NULL)
-		return (NULL);
-	strs[0] = NULL;
-	return (strs);
 }
 
 static size_t	ft_count_parts(char const *str, char c)
@@ -85,6 +72,7 @@ static char	**ft_alloc(char **strs, char *str, size_t parts, char c)
 		start += len;
 	}
 	strs[i] = NULL;
+	free(str);
 	return (strs);
 }
 
