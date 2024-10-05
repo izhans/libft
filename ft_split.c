@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 04:35:47 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/06 01:05:07 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/06 01:31:34 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char	**ft_split(char const *s, char c)
 	char	*str;
 
 	str = ft_strtrim(s, &c);
+	if (str == NULL)
+		return (NULL);
 	parts = ft_count_parts(str, c);
-	if (*str == '\0')
-		parts = 0;
 	strs = malloc((parts + 1) * sizeof(char *));
 	if (strs == NULL)
 		return (ft_free(NULL, str, 0));
@@ -38,6 +38,8 @@ static size_t	ft_count_parts(char const *str, char c)
 	size_t	parts;
 	size_t	strlen;
 
+	if (*str == '\0')
+		return (0);
 	i = 0;
 	parts = 1;
 	strlen = ft_strlen(str);
