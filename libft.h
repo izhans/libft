@@ -6,15 +6,15 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/03 04:35:43 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/05 20:54:04 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 
 #ifndef FT_LIBFT_H
 #define FT_LIBFT_H
+
+#include <stdlib.h>
 
 // part 1
 int ft_isalpha(int c);

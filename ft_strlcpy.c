@@ -6,11 +6,10 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:37:41 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/28 00:09:09 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/05 20:55:00 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

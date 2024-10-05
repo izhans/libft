@@ -6,11 +6,10 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 19:48:24 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/23 20:10:06 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/05 20:55:07 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)
