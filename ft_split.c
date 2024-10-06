@@ -6,37 +6,35 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 04:35:47 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/06 03:47:28 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/06 04:15:12 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_parts(char const *s, char c);
-static char		**ft_free(char **strs, size_t i);
+static size_t	ft_get_number_of_parts(char const *s, char c);
+static size_t	ft_count_parts(char const *str, char c, size_t i, size_t len);
 static char		**ft_alloc(char **strs, char const *str, size_t parts, char c);
+static char		**ft_free(char **strs, size_t i);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	size_t	parts;
 
-	parts = ft_count_parts(s, c);
+	parts = ft_get_number_of_parts(s, c);
 	strs = malloc((parts + 1) * sizeof(char *));
 	if (strs == NULL)
 		return (NULL);
 	return (ft_alloc(strs, s, parts, c));
 }
 
-static size_t	ft_count_parts(char const *str, char c)
+static size_t	ft_get_number_of_parts(char const *str, char c)
 {
 	size_t	i;
-	size_t	parts;
 	size_t	strlen;
-	int		sep;
 
 	i = 0;
-	parts = 0;
 	strlen = ft_strlen(str);
 	while (str[i] == c && i < strlen)
 		i++;
@@ -44,8 +42,17 @@ static size_t	ft_count_parts(char const *str, char c)
 		return (0);
 	while (str[strlen -1] == c)
 		strlen--;
+	return (ft_count_parts(str, c, i, strlen));
+}
+
+static size_t	ft_count_parts(char const *str, char c, size_t i, size_t len)
+{
+	int		sep;
+	size_t	parts;
+
 	sep = 0;
-	while (i < strlen)
+	parts = 0;
+	while (i < len)
 	{
 		if (!sep && str[i] == c)
 			sep = 1;
