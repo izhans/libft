@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/05 20:54:04 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/06 04:27:09 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
+char *ft_itoa(int n);
 
 #endif
