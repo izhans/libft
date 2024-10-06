@@ -6,13 +6,13 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:37:07 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/02 20:20:15 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/03 20:54:12 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src);
+static char	*ft_strcpy(char *dst, const char *src);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -33,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-char	*ft_strcpy(char *dst, const char *src)
+static char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 

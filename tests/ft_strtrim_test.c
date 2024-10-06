@@ -88,6 +88,18 @@ void test7()
 		print_test_fail(7, FUNCTION);
 }
 
+void test8()
+{
+	char *s1 = NULL;
+	char *set = "\0";
+
+	char *expected = "\0";
+	char *actual = ft_strtrim(s1, set);
+	printf("expected: %s actual: %s\n", expected, actual);
+	if (strcmp(expected, actual))
+		print_test_fail(7, FUNCTION);
+}
+
 int main()
 {
 	test1();
@@ -97,4 +109,5 @@ int main()
 	test5();
 	test6();
 	test7();
+	test8();
 }

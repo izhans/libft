@@ -6,15 +6,15 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/02 21:56:02 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/05 20:54:04 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 
 #ifndef FT_LIBFT_H
 #define FT_LIBFT_H
+
+#include <stdlib.h>
 
 // part 1
 int ft_isalpha(int c);
@@ -47,5 +47,6 @@ char *ft_strdup(const char *s);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
+char **ft_split(char const *s, char c);
 
 #endif
