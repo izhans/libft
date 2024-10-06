@@ -6,31 +6,26 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 04:35:47 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/06 03:11:56 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/06 03:47:28 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	ft_count_parts(char const *s, char c);
-static char		**ft_free(char **strs, char *str, size_t i);
-static char		**ft_alloc(char **strs, char *str, size_t parts, char c);
+static char		**ft_free(char **strs, size_t i);
+static char		**ft_alloc(char **strs, char const *str, size_t parts, char c);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	size_t	parts;
-	char	*str;
 
-	// str = ft_strtrim(s, &c);
-	str = ft_strdup(s);
-	if (str == NULL)
-		return (NULL);
-	parts = ft_count_parts(str, c);
+	parts = ft_count_parts(s, c);
 	strs = malloc((parts + 1) * sizeof(char *));
 	if (strs == NULL)
-		return (ft_free(NULL, str, 0));
-	return (ft_alloc(strs, str, parts, c));
+		return (NULL);
+	return (ft_alloc(strs, s, parts, c));
 }
 
 static size_t	ft_count_parts(char const *str, char c)
@@ -39,6 +34,7 @@ static size_t	ft_count_parts(char const *str, char c)
 	size_t	parts;
 	size_t	strlen;
 	int		sep;
+
 	i = 0;
 	parts = 0;
 	strlen = ft_strlen(str);
@@ -65,7 +61,7 @@ static size_t	ft_count_parts(char const *str, char c)
 	return (parts);
 }
 
-static char	**ft_alloc(char **strs, char *str, size_t parts, char c)
+static char	**ft_alloc(char **strs, char const *str, size_t parts, char c)
 {
 	size_t			i;
 	unsigned int	start;
@@ -82,16 +78,15 @@ static char	**ft_alloc(char **strs, char *str, size_t parts, char c)
 			len++;
 		strs[i] = ft_substr(str, start, len);
 		if (strs[i] == NULL)
-			return (ft_free(strs, str, i));
+			return (ft_free(strs, i));
 		i++;
 		start += len;
 	}
 	strs[i] = NULL;
-	free(str);
 	return (strs);
 }
 
-static char	**ft_free(char **strs, char *str, size_t i)
+static char	**ft_free(char **strs, size_t i)
 {
 	while (i)
 	{
@@ -99,6 +94,5 @@ static char	**ft_free(char **strs, char *str, size_t i)
 		free(strs[i]);
 	}
 	free(strs);
-	free(str);
 	return (NULL);
 }
