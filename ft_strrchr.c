@@ -6,12 +6,11 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 20:46:48 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/28 12:51:09 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/07 01:24:15 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 // returns a pointer to the last occurrence of the character c in the string s
 

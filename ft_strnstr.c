@@ -6,11 +6,10 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 00:06:39 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/27 23:22:51 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/07 01:25:37 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

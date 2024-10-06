@@ -6,11 +6,10 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:43:38 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/18 18:20:16 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/07 01:19:37 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

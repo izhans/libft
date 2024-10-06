@@ -6,11 +6,10 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 04:19:50 by isastre-          #+#    #+#             */
-/*   Updated: 2024/09/23 05:50:05 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/07 01:23:26 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 // size is the max size of the final dst

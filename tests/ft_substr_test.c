@@ -51,9 +51,22 @@ void test_substr_is_in_the_middle()
 	free(substr);
 }
 
+void test_size_is_bigger_than_possible_substr()
+{
+	char *expected = "la";
+	char *actual = ft_substr("hola", 2, 3);
+	if(strcmp(expected, actual))
+	{
+		print_test_fail(4, FUNCTION);
+		printf("Expected: >%s<\nActual: >%s<\n", expected, actual);
+	}
+	free(actual);
+}
+
 int main()
 {
 	test_substr_is_at_the_end();
 	test_size_is_bigger_than_substr();
 	test_substr_is_in_the_middle();
+	test_size_is_bigger_than_possible_substr();
 }

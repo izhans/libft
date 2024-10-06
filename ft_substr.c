@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:32:52 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/05 20:55:17 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/07 01:16:25 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = 0;
 		start = 0;
 	}
-	else if (len > str_len + start)
+	else if (len > str_len - start)
 		len = str_len - start;
 	substr = malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
