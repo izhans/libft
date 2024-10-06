@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 04:35:47 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/06 01:31:34 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/06 03:11:56 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	**ft_split(char const *s, char c)
 	size_t	parts;
 	char	*str;
 
-	str = ft_strtrim(s, &c);
+	// str = ft_strtrim(s, &c);
+	str = ft_strdup(s);
 	if (str == NULL)
 		return (NULL);
 	parts = ft_count_parts(str, c);
@@ -37,18 +38,30 @@ static size_t	ft_count_parts(char const *str, char c)
 	size_t	i;
 	size_t	parts;
 	size_t	strlen;
-
-	if (*str == '\0')
-		return (0);
+	int		sep;
 	i = 0;
-	parts = 1;
+	parts = 0;
 	strlen = ft_strlen(str);
+	while (str[i] == c && i < strlen)
+		i++;
+	if (str[i] == '\0')
+		return (0);
+	while (str[strlen -1] == c)
+		strlen--;
+	sep = 0;
 	while (i < strlen)
 	{
-		if (str[i] == c && str[i] != str[i + 1])
+		if (!sep && str[i] == c)
+			sep = 1;
+		else if (sep && str[i] != c)
+		{
 			parts++;
+			sep = 0;
+		}
 		i++;
 	}
+	if (sep == 0)
+		parts++;
 	return (parts);
 }
 
