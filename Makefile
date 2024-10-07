@@ -2,6 +2,7 @@
 NAME = libft.a
 CC = cc
 FLAGS = -Wall -Werror -Wextra
+
 SRCS = 	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -38,8 +39,11 @@ SRCS = 	ft_isalpha.c \
 		ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
 
+BONUS_SRCS = ft_lstnew_bonus.c
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
 # Rules
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 # Compiles libft
 all: $(NAME)
@@ -62,3 +66,11 @@ fclean: clean
 
 # Cleans and recompiles the libft
 re: fclean all
+
+# Creates libft.a including the bonus part
+bonus: libft.h $(OBJS) $(BONUS_OBJS)
+	ar -q $(NAME) $(OBJS) $(BONUS_OBJS)
+
+# Compiles bonus part .c files into .o files
+$(BONUS_OBJS): $(BONUS_SRCS)
+	$(CC) $(FLAGS) -c $(BONUS_SRCS)
