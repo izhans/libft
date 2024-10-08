@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/07 01:43:04 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/08 08:38:54 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,5 @@ void	ft_putnbr_fd(int n, int fd);
 
 // bonus
 t_list	*ft_lstnew(void *content);
-
+void	ft_lstadd_front(t_list **lst, t_list *new);
 #endif
