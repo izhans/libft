@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 17:15:57 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/09 20:57:08 by isastre-         ###   ########.fr       */
+/*   Updated: 2024/10/10 23:05:50 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (lst == NULL || del == NULL)
+		return ;
 	del(lst->content);
 	lst->content = NULL;
 	lst->next = NULL;
