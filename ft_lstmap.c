@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 17:15:57 by isastre-          #+#    #+#             */
-/*   Updated: 2024/10/10 23:05:50 by isastre-         ###   ########.fr       */
+/*   Created: 2024/10/10 12:19:47 by isastre-          #+#    #+#             */
+/*   Updated: 2025/01/15 18:38:11 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (lst == NULL || del == NULL)
-		return ;
-	del(lst->content);
-	lst->content = NULL;
-	lst->next = NULL;
-	free(lst);
+	t_list	*map;
+	t_list	*current;
+
+	if (lst == NULL || f == NULL || del == NULL)
+		return (NULL);
+	map = NULL;
+	while (lst)
+	{
+		current = ft_lstnew(f(lst->content));
+		if (current == NULL)
+		{
+			ft_lstclear(&map, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&map, current);
+		lst = lst->next;
+	}
+	return (map);
 }
