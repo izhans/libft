@@ -6,11 +6,9 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 13:18:27 by isastre-          #+#    #+#             */
-/*   Updated: 2025/03/21 14:17:29 by isastre-         ###   ########.fr       */
+/*   Updated: 2025/03/21 15:25:10 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../libft.h"
 
 unsigned int	ft_abs(int n)
 {

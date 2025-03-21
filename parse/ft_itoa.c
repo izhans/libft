@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 21:37:15 by isastre-          #+#    #+#             */
-/*   Updated: 2025/03/21 15:03:43 by isastre-         ###   ########.fr       */
+/*   Updated: 2025/03/21 15:22:52 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,4 @@ char	*ft_itoa(int n)
 		num /= 10;
 	}
 	return (str);
-}
-
-int	ft_number_len(long n)
-{
-	if (n < 0)
-		return (ft_number_len(n * -1) + 1);
-	if (n < 10)
-		return (1);
-	return (ft_number_len(n / 10) + 1);
 }

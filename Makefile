@@ -31,6 +31,7 @@ CHAR_SRCS = \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_isspace.c \
 			ft_tolower.c \
 			ft_toupper.c
 CHAR_OBJS = $(CHAR_SRCS:.c=.o)
@@ -44,6 +45,7 @@ STRING_SRCS = \
 			ft_striteri.c \
 			ft_strjoin.c \
 			ft_strlcat.c \
+			ft_strcpy.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
 			ft_strmapi.c \
@@ -70,7 +72,8 @@ MEMORY_OBJS = $(MEMORY_SRCS:.c=.o)
 PARSE_FOLDER = parse/
 PARSE_SRCS = \
 			ft_atoi.c \
-			ft_itoa.c
+			ft_itoa.c \
+			ft_number_len.c
 PARSE_OBJS = $(PARSE_SRCS:.c=.o)
 
 # Write
