@@ -61,6 +61,7 @@ MEMORY_FOLDER = memory/
 MEMORY_SRCS = \
 			ft_bzero.c \
 			ft_calloc.c \
+			ft_free_str_array.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memcpy.c \
@@ -81,8 +82,10 @@ WRITE_FOLDER = write/
 WRITE_SRCS = \
 			ft_putchar_fd.c \
 			ft_putendl_fd.c \
+			ft_putendl.c \
 			ft_putnbr_fd.c \
-			ft_putstr_fd.c
+			ft_putstr_fd.c \
+			ft_putstr.c
 WRITE_OBJS = $(WRITE_SRCS:.c=.o)
 
 OBJ = $(MATH_OBJS) $(LISTS_OBJS) $(CHAR_OBJS) $(STRING_OBJS) $(MEMORY_OBJS) $(PARSE_OBJS) $(WRITE_OBJS)

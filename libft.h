@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2025/03/21 15:39:55 by isastre-         ###   ########.fr       */
+/*   Updated: 2025/04/02 17:36:23 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int				ft_toupper(int c);
 // memory
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
+void			ft_free_str_array(char **strs);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -71,6 +72,8 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+void			ft_putstr(char *s);
+void			ft_putendl(char *s);
 
 // lists
 void			ft_lstadd_front(t_list **lst, t_list *new);
