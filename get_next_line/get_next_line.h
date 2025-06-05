@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 20:10:29 by isastre-          #+#    #+#             */
-/*   Updated: 2025/06/05 14:09:40 by isastre-         ###   ########.fr       */
+/*   Created: 2024/12/04 20:53:54 by isastre-          #+#    #+#             */
+/*   Updated: 2025/06/05 14:13:41 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-/**
- * @brief measures the length of a string
- * @param str the string to measure
- * @returns the length of the string or 0 if its NULL
- */
-size_t	ft_strlen(const char *str)
-{
-	int	i;
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 25
+# endif
 
-	i = 0;
-	if (str == NULL)
-		return (0);
-	while (str[i])
-		i++;
-	return (i);
-}
+# include "../libft.h"
+
+char	*get_next_line(int fd);
+// utils
+void	ft_gnl_free(char **line);
+int		ft_gnl_has_new_line(char *line);
+int		ft_gnl_where_is_new_line(char *line);
+
+#endif

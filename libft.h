@@ -6,7 +6,7 @@
 /*   By: isastre- <isastre-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:48:03 by isastre-          #+#    #+#             */
-/*   Updated: 2025/06/05 13:31:45 by isastre-         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:50:20 by isastre-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+// get next line
+char			*get_next_line(int fd);
 
 // char
 int				ft_isalnum(int c);
